@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the container horizontally */
+            align-items: stretch; /* Equal height for all boxes */
+            margin: 20px;
+        }
+
+        .movie-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column; /* Align content vertically */
+            align-self: flex-start; /* Align each box to the left within its row */
+            transition: all 0.3s ease; /* Optional: Add a smooth transition effect */
+            word-wrap: break-word; /* Allow text to wrap onto the next line */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+            background-color: #fff; /* Optional: Set a background color for the box */
+        }
+
+        .movie-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18pt;
+            color: black;
+        }
+
+        .movie-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .movie-title a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .movie-title a:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        .movie-info {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        #change-page-container {
+            text-align: center;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #change-page-container p {
+            margin: auto 10px;
+            background: lightpink;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #change-page-container input {
+            padding: 5px 10px;
+        }
+    </style>
+    <title>Fabflix</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="autocomplete" placeholder="Search for Movie...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+        <a href="cart.html" class="cart-link">
+            <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart Icon"> Cart
+        </a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <h1 id="pageHeader" class="title" ></h1>
+
+    <div style="text-align: center">
+        <form ACTION="#" METHOD="GET" id="view-edit-form">
+            <label for="limitSelect">Limit:</label>
+            <select id="limitSelect" name="limit">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+
+            <label for="orderSelect">Sort By:</label>
+            <select id="orderSelect" name="order">
+                <option value="TascRasc">Title↑ Rating↑</option>
+                <option value="TascRdsc">Title↑ Rating↓</option>
+                <option value="TdscRasc">Title↓ Rating↑</option>
+                <option value="TdscRdsc">Title↓ Rating↓</option>
+                <option value="RascTasc">Rating↑ Title↑</option>
+                <option value="RascTdsc">Rating↑ Title↓</option>
+                <option value="RdscTasc">Rating↓ Title↑</option>
+                <option value="RdscTdsc">Rating↓ Title↓</option>
+            </select>
+            <input TYPE="HIDDEN" name="action" id="query-input" value="view">
+            <input TYPE="SUBMIT" VALUE="Edit View">
+        </form>
+    </div>
+
+
+    <div id="movie-container"></div>
+
+    <div id="change-page-container" style="text-align: center; margin-bottom: 50px;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <script src="movie-list.js"></script>
+</body>
+</html>

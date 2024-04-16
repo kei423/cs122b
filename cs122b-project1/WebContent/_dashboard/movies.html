@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <title>Add a Movie</title>
+
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <a href="home.html" class="logo-link" style="margin-right: 60%;">Fabflix Dashboard</a>
+        <a class="active" href="../index.html">Browse Movies</a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <form id="dashboard_insert_star_form" method="post" action="">
+        <h1>Add a Movie</h1>
+        <div id="dashboard_insert_star_msg"></div>
+        <label>Movie Title</label>
+        <label>
+            <input name="title" placeholder="Enter movie title" type="text">
+        </label>
+        <br>
+        <label>Release Year</label>
+        <label>
+            <input name="year" placeholder="Enter year of release" type="number">
+        </label>
+        <br>
+        <label>Director Name</label>
+        <label>
+            <input name="director" placeholder="Enter director name" type="text">
+        </label>
+        <br>
+        <label>Star Name</label>
+        <label>
+            <input name="star" placeholder="Enter star name" type="text">
+        </label>
+        <br>
+        <label>Genre Name</label>
+        <label>
+            <input name="genre" placeholder="Enter genre name" type="text">
+        </label>
+        <br>
+        <input name="action" value="insertMovie" type="hidden">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="stars.js"></script>
+</body>
+</html>

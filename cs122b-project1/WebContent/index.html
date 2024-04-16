@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fabflix</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="autocomplete" placeholder="Search for Movie...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+        <a href="cart.html" class="cart-link">
+            <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart Icon"> Cart
+        </a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <h2 class="title">Advanced Search</h2>
+    <form style="align-content: center" ACTION="movie-list.html" METHOD="GET" id="advanced-search-form">
+        <input TYPE="HIDDEN" name="action" id="type-input" value="advancedSearch">
+        <input TYPE="TEXT" name="title" id="title-input" placeholder="Movie title">
+        <input TYPE="TEXT" name="year" id="year-input" placeholder="Release year">
+        <input TYPE="TEXT" name="director" id="director-input" placeholder="Director name">
+        <input TYPE="TEXT" name="star" id="star-input" placeholder="Star name">
+        <input TYPE="SUBMIT" id="submit_btn" VALUE="Search Movies">
+    </form>
+
+    <h2 class="title">Browsing by Movie Genres</h2>
+    <div id="genres-container" class="browse-container"></div>
+
+    <h2 class="title">Browsing by Movie Title</h2>
+    <div id="title-container" class="browse-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

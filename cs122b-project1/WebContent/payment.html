@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Fabflix</title>
+    <style>
+        /* Apply styles to the form container */
+        #payment_form {
+            max-width: 22%;
+            margin: 5% auto;
+            padding: 2%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style input fields */
+        #payment_form input[type="text"] {
+            width: 100%;
+            padding: 2%;
+            margin: 2% 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Style submit button */
+        #payment_form input[type="submit"] {
+            width: 100%;
+            background-color: rgba(0, 51, 189, 0.98);
+            color: white;
+            margin-top: 5%;
+            padding: 3%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #payment_form input[type="submit"]:hover {
+            background-color: #012bbb;
+        }
+
+        /* Style error message */
+        #payment_error_msg {
+            color: red;
+            text-align: center;
+        }
+    </style>
+<!--    For inserting the full price at the start, doesn't work for some reason-->
+<!--    <script>-->
+<!--        // populates total price as soon as site is visited-->
+<!--        $(document).ready(function() {-->
+<!--            $.ajax({-->
+<!--                method: 'GET',-->
+<!--                url: 'api/payment',-->
+<!--                success: function(resultData) {-->
+<!--                    console.log('Received data:', resultData);-->
+<!--                    $('#totalPrice').text('Total Price: $' + resultData["price"]);-->
+<!--                }-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <button style="margin: 1%;" class="back-button" onclick="location.href='cart.html'">
+        Cancel
+    </button>
+
+    <h1 class="title">Check Out</h1>
+    <form id="payment_form" method="post" action="#">
+        <h2>Payment Details</h2>
+    <!--    <div id="totalPrice"></div>-->
+        <label>Credit Card Id</label>
+        <label>
+            <input name="id" placeholder="Enter Credit Card Id" type="text">
+        </label>
+        <br>
+        <label>First Name</label>
+        <label>
+            <input name="first-name" placeholder="Enter First Name" type="text">
+        </label>
+        <br>
+        <label>Last Name</label>
+        <label>
+            <input name="last-name" placeholder="Enter Last Name" type="text">
+        </label>
+        <br>
+        <label>Expiration Date</label>
+        <label>
+            <input name="expiration-date" placeholder="Enter Expiration Date" type="date">
+        </label>
+        <br>
+        <input type="submit" value="Place Order">
+    </form>
+
+    <div id="payment_error_msg"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>

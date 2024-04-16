@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Fabflix</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="autocomplete" placeholder="Search for Movie...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+        <a href="cart.html" class="cart-link">
+            <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart Icon"> Cart
+        </a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <button style="margin: 1%;" class="back-button" onclick="location.href='movie-list.html'">
+        Back to Movie List
+    </button>
+
+    <h1 class="title">Cart</h1>
+
+    <table id="cart_table" class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Cart</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody id=cart_table_body></tbody>
+    </table>
+
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="cart.js"></script>
+</body>
+
+</html>

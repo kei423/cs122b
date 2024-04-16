@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="page_title"></title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #movie_details {
+            border: 1px solid #ccc;
+            padding: 15px;
+            box-sizing: border-box;
+            width: 80%;
+            text-align: center;
+            margin: 5% auto;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        #movie_details h2 {
+            margin-bottom: 10px;
+        }
+
+        #movie_details p {
+            margin-bottom: 40px;
+        }
+
+        .add-to-cart-button input[type="submit"] {
+            width: 50%;
+            padding: 15px 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="autocomplete" placeholder="Search for Movie...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+        <a href="cart.html" class="cart-link">
+            <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart Icon"> Cart
+        </a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <button style="margin: 1%;" class="back-button" onclick="location.href='movie-list.html'">
+        Back to Movie List
+    </button>
+
+    <h1 id="movie_title" class="title"></h1>
+
+    <div id="movie_details"></div>
+
+    <script src="single-movie.js"></script>
+</body>
+</html>

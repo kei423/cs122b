@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .single-star-container {
+            position: relative;
+            margin: 20px; /* Adjust margin as needed */
+            overflow: hidden;
+        }
+
+        .single-star-container-circle {
+            position: absolute;
+            width: 300px; /* Adjust width as needed */
+            height: 300px; /* Adjust height as needed */
+            background-color: #fff; /* Set your background color */
+            border-radius: 50%;
+            top: -150px; /* Half of the circle's height to center it vertically */
+            left: -150px; /* Half of the circle's width to center it horizontally */
+            z-index: -1;
+        }
+
+        .single-star-container-content {
+            z-index: 1;
+            padding: 20px; /* Adjust padding as needed */
+            background-color: rgba(255, 255, 255, 0.8); /* Set your background color with alpha for transparency */
+            border-radius: 10px; /* Adjust border radius as needed */
+        }
+    </style>
+    <title id="page_title"></title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">Fabflix</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="autocomplete" placeholder="Search for Movie...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+        <a href="cart.html" class="cart-link">
+            <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart Icon"> Cart
+        </a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <button style="margin: 1%;" class="back-button" onclick="location.href='movie-list.html'">
+        Back to Movie List
+    </button>
+
+    <h1 id="star_name" class="title"></h1>
+
+    <h2 id="star_dob" style="text-align: center"></h2>
+    <h3 style="margin-left: 2%;">Movies In Which The Star Acted</h3>
+
+    <div id="movie-info-container" class="movie-info-container"></div>
+
+    <script src="single-star.js"></script>
+</body>
+</html>

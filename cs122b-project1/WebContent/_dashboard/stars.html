@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <title>Add a Star</title>
+
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <a href="home.html" class="logo-link" style="margin-right: 60%;">Fabflix Dashboard</a>
+        <a class="active" href="../index.html">Browse Movies</a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <form id="dashboard_insert_star_form" method="post" action="">
+        <h1>Add a star</h1>
+        <label>Star Name</label>
+        <label>
+            <input name="name" placeholder="Enter star name" type="text">
+        </label>
+        <br>
+        <label>Birth Year</label>
+        <label>
+            <input name="year" placeholder="Enter year of birth" type="number">
+        </label>
+        <br>
+        <input name="action" value="insertStar" type="hidden">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="dashboard_insert_star_msg"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="stars.js"></script>
+</body>
+
+</html>

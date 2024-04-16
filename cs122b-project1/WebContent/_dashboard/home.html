@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        #add-entry-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #add-entry-container button {
+            padding: 20px 20px;
+            background: skyblue;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 1%;
+            border: none;
+            cursor: pointer;
+        }
+
+        #add-entry-container button:hover {
+            background: deepskyblue;
+            color: black;
+        }
+
+        #table_container table {
+            border-radius: 0;
+        }
+
+        #table_container caption{
+            font-size: 1.3em;
+            margin-bottom: 11px;
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <a href="home.html" class="logo-link" style="margin-right: 60%;">Fabflix Dashboard</a>
+        <a class="active" href="../index.html">Browse Movies</a>
+        <a href="login.html"> Logout</a>
+    </nav>
+
+    <h2 class="title">Add to Database</h2>
+    <div id="add-entry-container">
+        <button style="margin: 1%;" class="logo-link" onclick="location.href='stars.html'">
+            Add a Star
+        </button>
+        <button style="margin: 1%;" class="browse-movies-link" onclick="location.href='genres.html'">
+            Add a Genre
+        </button>
+        <button style="margin: 1%;" class="logout-link" onclick="location.href='movies.html'">
+            Add a Movie
+        </button>
+    </div>
+
+    <h2 class="title">Metadata</h2>
+    <div id="table_container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

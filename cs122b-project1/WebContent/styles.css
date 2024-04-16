@@ -1,0 +1,299 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #FF6B6B, #CB76FF, #B843FF);
+}
+
+.title {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* Styling for top navigation bar */
+
+nav {
+    background-color: black;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+nav a, nav a:visited {
+    color: white;
+}
+
+nav .logo-link {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .search-container {
+    display: flex;
+    width: 50%;
+    margin: 0 35px 0 auto;
+}
+
+nav .search-bar {
+    margin-right: 8px;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+}
+
+nav .search-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for the button */
+}
+
+nav .cart-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .cart-icon {
+    margin-right: 3px;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+}
+
+/* Styling for table */
+
+.table {
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+    border-radius: 30px;
+}
+
+.table th{
+    background-color: gray;
+    color: white;
+}
+
+.table td, .table th {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+
+/* Styling for Login and Dashboard Login Forms */
+
+.login_logo {
+    margin-left: 25px;
+}
+
+.input_form, #dashboard_insert_star_form,
+#dashboard_insert_genre_form{
+    margin: 2% auto;
+    padding: 2%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input_form h2, #dashboard_insert_star_form h1,
+#dashboard_insert_genre_form h1 {
+    /*text-align: center;*/
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1%;
+    padding: 3%;
+}
+
+.input_form label, .input_form div, .input_form p {
+    width: 90%;
+}
+
+.input_form label {
+    margin-bottom: 10px;
+}
+
+.input_form input[type="text"], .input_form input[type="password"],
+#dashboard_insert_star_form input[type="text"], #dashboard_insert_star_form input[type="number"],
+#dashboard_insert_genre_form input[type="text"] {
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.input_form input[type="submit"],
+#dashboard_insert_star_form input[type="submit"],
+#dashboard_insert_genre_form input[type="submit"]{
+    width: 90%;
+    background-color: rgba(0, 51, 189, 0.98);
+    color: white;
+    margin-top: 5%;
+    padding: 3%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input_form input[type="submit"]:hover,
+#dashboard_insert_star_form input[type="submit"]:hover,
+#dashboard_insert_genre_form input[type="submit"]:hover{
+    background-color: #012bbb;
+}
+
+.login_error_msg, #dashboard_login_error_msg {
+    color: red;
+    text-align: center;
+}
+
+#dashboard_insert_star_msg, #dashboard_insert_genre_msg {
+    color: green;
+    text-align: center;
+}
+
+
+/* Various Buttons */
+
+.add-to-cart-button {
+    margin-top: auto;
+    width: 100%;
+    display: inline-block;
+}
+
+.add-to-cart-button form {
+    margin: 0;
+}
+
+.add-to-cart-button input[type="submit"] {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.checkout-button {
+    background: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* Index.js */
+#advanced-search-form {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 3%;
+}
+
+#advanced-search-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#advanced-search-form input, #advanced-search-form select, #advanced-search-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 2%;
+    border-radius: 5px;
+    border-color: darkgrey;
+}
+
+#advanced-search-form button {
+    width: 100%;
+}
+
+.browse-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+}
+
+.browse-container a {
+    color: blue;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    background-color: lightcyan;
+}
+
+.browse-container a:hover {
+    color: white;
+    background-color: blue;
+}
+
+/* Other */
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+/*#recaptcha {*/
+/*    display: contents;*/
+/*}*/
+
